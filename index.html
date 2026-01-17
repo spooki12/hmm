@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Name</title>
+</head>
+<body style="text-align:center; margin-top:50px; font-family:sans-serif;">
+  <h2>Enter the right name</h2>
+  <input type="text" id="nameInput" placeholder="Type here">
+  <br><br>
+  <button onclick="checkName()">Submit</button>
+
+  <p id="message" style="margin-top:20px; font-size:18px;"></p>
+
+  <script>
+    const correctName = "raneem"; // ← الاسم الصحيح هنا
+
+    function checkName() {
+      const input = document.getElementById("nameInput").value;
+      const msg = document.getElementById("message");
+
+      if (input === correctName) {
+        msg.textContent = " You found it <3 ur the one. now can u follow me please? and im the one who u think. (wink) ";
+      } else {
+        msg.textContent = "";
+      }
+    }
+  </script>
+</body>
+</html>
